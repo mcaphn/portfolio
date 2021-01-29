@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/style-encyc.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Tajawal:wght@300;500&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <title>Encyclopedia.com Website Redesign</title>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <a class="logo" class="link" href="../index.html">MICA PHAN</a>
+      <ul class="nav-links">
+        <li><a class="link" href="../index.html#work">Work</a></li>
+        <li><a class="link about-link" href="../about.html">About</a></li>
+        <li><a class="link" href="#">Contact</a></li>
+      </ul>
+      <button class="toggle">
+        <svg viewBox="-20 0 120 50" width="40" height="45">
+          <rect width="80" height="8" rx="8"></rect>
+          <rect y="20" width="80" height="8" rx="8"></rect>
+          <rect y="40" width="80" height="8" rx="8"></rect>
+        </svg>
+      </button>
+
+      <aside class="sidebar">
+        <ul class="sidebar-links">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../about.html">About</a>
+          </li>
+          <li>
+            <a href="../index.html#work">Work</a>
+          </li>
+          <li>
+            <a href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <header>
+    <img src="img/Group.png" alt = "Dog shaking hand with owner" width=100%>
+    <div class="banner-caption">Design for trust. I<span>Photo by <a href="https://unsplash.com/@fbngsk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Fabian Gieske</a> on <a href="https://unsplash.com/s/photos/trust?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></div>
+    </header>
+
+    <div class="grid-main">
+      <div class="title">Encyclopedia.com<br>Website Redesign</div>
+      <span class="span"></span>
+      <div class="overview"><p>
+        <span class="firstcharacter">E</span>ncyclopedia.com is a free online encyclopedia that aggregates information from other published dictionaries, encyclopedias, and reference works. The website states that it offers credible information from reliable sources. However, because Encyclopedia.com provides such a poor web experience, surveyed users stated they would not use the free and credible information it provides.</p>
+      <blockquote><div class="quote">"This [site] is unusable, so it doesn't matter if the information is accurate or not."</div><div class="author"><br>- Tim H., Review of Encyclopedia.com on Sitejabber.com</div></blockquote>
+      <p>According to <a class="hotlink" href="https://trends18.fjordnet.com/in-transparency-we-trust/" target="_blank">Fjord.net</a>, organizations must be prepared for an inevitable shift towards “quality of trust” as a competitive advantage. With the number of reference information services available online, Encyclopedia.com is losing trust in users because of its current design. As a designer, I ask, <b>how can I use my UX knowledge to create trust between users and this digital service?</b><br>
+      <div class="box">
+      <b>Role:</b> Lead UX Designer<br>
+      <b>Timeline: </b>August - September 2020<br>
+      <b>Research Methods: </b>Usability Test, Surveys, A/B Testing<br>
+      <b>Tools:</b> Adobe XD, Figma<br>
+      <b>Purpose:</b> Case Study
+      </div></p>
+
+      <p class="disclaimer"><i>Disclaimer: I do not work for Encyclopedia.com. The views from this case study is strictly my own and is not reflective of Encyclopedia.com. As I do not have access to their datas and metrics, this case study is not meant to be comprehensive or exhaustive in any way.</i></p>
+      </div>
+
+
+      <span class="span"></span>
+
+      <h2 class="chapter-title">Plan</h2>
+      <img class="visual-process-v" alt = "Visual of 5-step Design Process" src="img/process-visual-vertical.png">
+      <img class="visual-process-h" alt = "Visual of 5-step Design Process" src="img/process-visual-horizantal.png">
+      <p class="article">
+        My goals for this case study was to 1) increase users’ trust in Encyclopedia.com’s website, and 2) challenge myself in human-centered design. To plan this study, I followed a five-phase design process: research, analyze, ideate, prototype, test.
+        <br><br>
+        I order to understand how organizations instill trust in their products and services, I performed preliminary research by reading several articles and studies about transparency and trust. Learning about those strategies not only later reinforced my design decisions, but it provided an understanding of my user’s needs in a much deeper context.
+        <br><br>
+        For this particular case study, I decided to plan the scope of my design around <a class="hotlink" href="https://uxdesign.cc/what-does-trust-really-mean-c455a3f72e8b?gi=b0c73ebd70c6" target="_blank">Arjen van Gaal’s four fundamentals of trust</a>:
+        <br><br>
+
+        <b>Benevolence:</b> Showing that one cares about another.<br>
+        <b>Reliability:</b> Consistency, and doing what you say you do.<br>
+        <b>Integrity:</b> Having a set of values and doing the right thing.<br>
+        <b>Credibility:</b> Trusting someone in a certain context because they are competent within that context.
+        <br><br>
+        <b>I strategized that if I addressed the pain points discovered in my research while simultaneously fulfilling Gaal’s four fundamentals of trust, I could increase trust in Encyclopedia.com’s users.</b>
+        </p>
+
+        <span class="span"></span>
+
+        <h2 class="chapter-title">Research</h2>
+        <p class="article">To evaluate the current Encyclopedia.com website, I relied on usability tests and remote surveys. Four people participated in the remote usability test via Zoom, and 24 people participated in an online survey. By combining both qualitative and quantitative information, I gained a broader perspective on the website's UX issues.
+        <br><br>
+        <b>Target Audience</b>: Encyclopedia.com is an academic resource, so I screened for participants who were 18+ years old and are currently pursuing, or had completed, an undergraduate education.
+        <br><br>
+
+        <b>Initial Findings:</b>
+        <br><br>
+        <div class="number">6.2/10</div><div class="finding">On average, participants rated their overall experience on Encyclopedia.com a 6.2 out of 10.</div><br>
+        <div class="number">18%</div><div class="finding">Only 18% of the participants had used Encyclopedia.com before. After their experience, 60% reported they would visit the site again by choice.</div><br>
+        <div class="number">50%</div><div class="finding">In the usability test, 2 out of 4 participants could not complete their task on Encyclopedia.com. Both continued their topic search on a different website.</div><br>
+        <div class="number">Fig. 1</div><div class="finding">Users felt less confident about the credibiity of Encyclopedia.com’s information than they typically do with other information they find online.<span class=
+        "span-sm"></span></div><br>
+
+        <div class="grapha">
+        <img src="img/grapha.png"  width="300px" alt="Graph showing that test users rated Encyclopedia.com's credibility 12-17% less than the rating they give to other sites.">
+        <span class="span"></span>
+        </div>
+
+        <div class="article">
+
+          <b>Why such low rates of conversion and task completion, and poor user experience scores?</b> <br><br>From my analysis, I concluded three main pain points:
+          <br><br>
+          1. Distracting advertisements;<br>
+          2. Disorientating search results;<br>
+          3. Outdated and unattractive aesthetics.<br><br>
+
+        </div>
+
+        <span class="span"></span>
+
+    <table class="graphs-table">
+      <tr>
+        <td width="66%" height="250px"><img class="diagrams" alt = "Empathy Map" src="img/empathymap.jpg"></td>
+        <td class="caption">
+          Empathy Map<br><i>Learned about my user by organizing participant research data and deducing patterns.</i>
+        </td>
+      </tr>
+      <tr height=50px></tr>
+      <tr>
+        <td width="66%" height="200px"><img class="diagrams" alt = "User Persona" src="img/userpersona.png"></td>
+        <td class="caption">
+          User Persona<br><i>Created a user persona as an important point of reference regarding my users' needs, experiences, behaviors, and goals.</i>
+        </td>
+      </tr>
+      <tr height=50px></tr>
+      <tr>
+        <td width="66%" height="200px"><img class="diagrams" alt="Journey Map" src="img/journeymap.png"></td>
+        <td class="caption">
+          Journey Mapping<br><i>Mapped test users' journeys to pinpoint problem areas in need of solutions.</i>
+        </td>
+      </tr>
+    </table>
+
+
+    <span class="span"></span>
+
+      <h2 class="chapter-title">Design</h2>
+      <p class="article">
+        People want results as quickly and painlessly as possible. The site map on Encyclopedia.com was already fairly simple and straightforward, but their information architecture had issues.  I began the design with low-fidelity sketches, which turned into low-fidelity wireframes.<br><br>
+      </p>
+
+        <div class="sketch-container">
+          <img width=80% alt = "A Low-Fidelity Sketch" src="img/lowfisketch.png"><br><br>
+
+          <img width=80% alt = "A Low-Fidelity Wireframe" src="img/wireframe.png"><br><br>
+        </div>
+        <p class="article">
+        I created some mockups and performed an A/B test survey with 25 remote survey participants. After studying the results and revising my design, I created a prototype.
+        <br><br>
+        The next section highlights and compares Encyclopedia.com’s current website and my re-design. To ensure trustability, I made sure that most of my design decisions supported at least one of Gaal’s four fundamentals of trust (benevolence, credibility, integrity, reliability).
+      </p>
+
+      <h2 class="chapter-title"></h2>
+      <p class="article">
+        <div class="subtitle">Landing Page (August 2020) - Before</div>
+        <img class="screenshot" width=100% alt="Current Landing Page of Encyclopedia.com" src="img/encyc-landing.png"><br>
+        <div class="article para">
+        Many of the research participants expressed a desire for a more “modern” and “updated” aesthetic. While users found the site’s simplicity appealing, the juxtaposition of certain elements (colors, content, style) became overwhelming and busy. Users had trouble focusing their eyes on individual elements. In addition, users found the question prompt in the search box confusing and not in-line with the site’s actual capabilities.</div><br>
+
+        <span class="span"></span>
+        <div class="subtitle">
+          After</div>
+          <img  class="screenshot" width=100% alt = "Prototype Landing Page" src="img/prototype-landing.png">
+        <div class="article para">
+        I went for a clean, professional and minimalistic layout. This time, test participants actually noticed the source-publishers’ logos. “I actually noticed the publisher sources on the homepage, and found them to give greater <i>credibility</i> to the information I found when I searched.” The search bar is centerstage and no scrolling is required - a nod to Google’s effective landing page. Providing the potential for user profiles offers greater site-interaction, and putting site features front-and-center under the search bar increases understanding of the site’s capabilities.</div>
+        <br>
+
+
+        <span class="span"></span>
+        <div class="subtitle">Search Results Page - Before</div>
+        <img class="screenshot" alt="Encyclopedia.com's Search Results Page" width=100% src="img/encyc-results.png">
+        <div class="article para">
+        The search results page made users feel apprehensive about the quality of the results, and made them question their next steps in finding information. There are copious amounts of ad text before the site presents a user’s search results. The results presented are numerous, but upon a closer look, they also included results unrelated to the user’s actual search goals. Search titles are often cut off due to character limits, and descriptions tend to be random article snippets that are non-informative or outright incoherent.</div><br>
+
+
+        <span class="span"></span>
+        <div class="subtitle">
+          After</div>
+          <img class="screenshot" alt="Prototype Search Result Page" width=100% src="img/prototype-results.png">
+        <div class="article para">
+        90% of survey participants in the A/B test said the prototype search page was more appealing, efficient, user-focused, and credible. My goals were to increase the size and visibility of the search bar, to provide live aggregation of search results as a user types in their topic, enable advanced filtration for search refinement, and to prominently display verified sources for each search result to make users feel confident in the information they were getting. “The design is clean and give[s] out a serious and <i>trustworthy</i> vibe”.</div><br>
+
+
+        <span class="span"></span>
+
+        <div class="subtitle">Article Page - Before</div>
+        <img class="screenshot" alt="Encyclopedia.com's Article Page" width=100% src="img/encyc-article.png">
+        <div class="article para">
+        Users found Encyclopedia.com’s article page challenging. Several functional elements on the page don’t make sense. The breadcrumb trail at the head often doesn’t relate to the topic at hand, rendering it useless. There were many features (such as source groupings) that went completely unnoticed. Article bibliography was not prominently featured, and the excessive ads were disruptive to users’ experiences which affected their perceptions of the site’s integrity. “I think what ends up happening is if there [are] lots of advertisements, it starts to take away from the credibility of the source [...] where it’s sometimes hard to even go on the website to begin with, so this must not be anything I should give my time to.”</div><br>
+
+        <span class="span"></span>
+        <div class="subtitle">
+          After</div>
+          <img class="screenshot" alt="Prototype Article Page" width=100% src="img/prototype-article.png">
+          <div class="article para">
+        In the A/B test, 84% indicated that the prototype article was more trustworthy than Encyclopedia’s article on the same topic (note: I used exactly the same content). The advertisements are off to the side and non-disruptive. I also included a donation button to help mitigate the frequency of ads. Users can easily move from source to source without getting lost or leaving the page. The side bar is a dedicated area for those seeking credibility about the article.</div>
+        <br>
+        <span class="span-sm"></span>
+          <br>
+        <div class="article para">
+        From my initial research, I learned that users were hesitant to give their trust in Encyclopedia.com because they had not used it before and needed “to see how other people use it”. In response, I added “Like/Dislike” buttons for extra user interaction and to provide the perception that others are validating the website. The prototype seemed to increase the user’s experience: “I enjoyed looking for the information and pictures and bibliography”.
+        <span class="span-sm"></span>
+      </div>
+
+
+
+        <div class="article"><a href="https://xd.adobe.com/view/3d4a4c74-5e1f-48d0-8a60-e096acd21113-6819/?fullscreen" target="_blank"><b>Click here to view the full prototype.</b></a></div>
+        <br><br>
+
+    <span class="span"></span>
+
+
+      <h2 class="chapter-title">Outcome</h2>
+      <p class="article">
+        <b>Did my design improve Encyclopedia.com? Did I raise Encyclopedia.com’s trust in users?</b> Once I had my full prototype, I conducted another user test with sixteen participants via remote survey to measure the success. The results are positive.
+
+        <span class="span"></span>
+
+          <img src="img/graphc.png" class="diagrams" alt="User Satisfaction Rating">
+
+        <br><br>
+        <b>Findings:</b><br>
+        <div class="number">8/10</div><div class="finding">Participants rated their experience on the prototype an average of 8 out of 10 (compared to 6.2 out of 10). </div><br>
+        <div class="number">95%</div><div class="finding">93% noted that they trusted the prototype website enough that they would use it again.</div><br>
+        <div class="number">Fig. 2</div><div class="finding">My prototype design earned 15% more credibility with participants than Encyclopedia.com’s current website.</div>
+        <br><br>
+
+        <div class="graphb">
+          <img src="img/graphb.png" width="300px" alt="Credibility Comparison">
+        </div>
+
+
+        <span class="span"></span>
+
+      <h2 class="chapter-title">Self-Reflection</h2>
+      <p class="article">
+        I valued most the research and analysis part of the process. Despite the global circumstances that prevented in-person research, I'm appreciative of the existing technology that allowed me to perform various kinds of tests remotely, and multiple times. From the data itself, it was fascinating to learn that aspects about the site that affected me the most didn’t seem to bother others as much. Discoveries like that were good reminders to keep my opinions and personal bias in check.
+        <br><br>
+        I wish I asked for more specificity when gathering participant feedback. For example, test participants wanted a more “updated” and “prettier” design, so in the early stages of prototyping, I gave too much attention to the visual aspects. I was trying so hard to design something “pretty,” that I realized I lost focus of my end user and the real problems that needed addressing. I could have saved a lot of time if I had asked test participants for specific examples to support subjective feedback.
+        <br><br>
+        In my research, 81% of survey respondents said they typically use their mobile device to perform research. Encyclopedia.com’s current mobile view is practically unusable due to the overwhelming number of ads. As a next step, I would like to create a mobile-friendly version of the site, or even a prototype of a mobile app.
+      </p>
+      <br><br>
+      <div class="subtitle">Final Insights...</div>
+      <p class="final">
+        Successful relationships require trust, especially those that only exist in a digital capacity. <b>Even though my UX solutions increased trust with users, they only scratched the surface.</b> I believe if Encyclopedia.com expressed a more focused, transparent and devoted mission towards education and providing quality and reliable information, people would trust it even more. Part of the problem is that as it stands, Encyclopedia.com does not feel like a website operated by human beings. This leaves the website feeling unattended, resulting into visitors feeling unwelcome. With a full scope redesign, Encyclopedia.com could become a very popular online informational resource.
+      </p>
+    </div>
+
+          <span class="span"></span>
+
+          <a href="#" class="top-btn link">Back to Top</a>
+
+    <script src="../script.js"></script>
+  </body>
+
+  <footer>
+  <div class="main-footer">©2020 Built by Mica Phan</div>
+  </footer>
+
+</html>

@@ -1,0 +1,551 @@
+* {
+  box-sizing: border-box;
+}
+
+/* --------------
+Link Styles
+----------------- */
+a {
+  text-decoration: none;
+  color: #707070;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.current-link {
+  color: #000000;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+a.link{
+  position: relative;
+  font-size: 14px;
+}
+
+a.link:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background: #AF8976;
+  border-radius: 300px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link:hover:before{
+  width: 100%;
+  visibility: visible;
+}
+
+.about-link {
+  margin: 0 20px;
+}
+
+a.hotlink {
+  font-family: "Crimson Text";
+  text-decoration: underline;
+  color: #AF8976;
+}
+
+.button {
+  margin: 0 auto;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px 8px 20px;
+  border: solid 1px #333333;
+}
+
+
+.button:hover {
+  color: #ffffff;
+  background-color: #AF8976;
+  border: none;
+}
+
+/* --------------
+Navbar Styles
+-----------------*/
+#navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: #FFFFFF;
+  top: 0;
+  padding: 1% 5% 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-family: "Josefin Sans";
+  color: #333333;
+  text-align: center;
+  margin-top: 18px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.toggle-spin {
+  transform: rotate(90deg);
+}
+
+/*---- Aside ----*/
+.sidebar {
+  text-align: left;
+  width: 150px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1001;
+  right:0;
+  top: 55px;
+  transform: translate(100%);
+  transition: transform .5s;
+}
+
+.sidebar-links {
+  padding: 0px 40px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.sidebar-links li {
+  padding: 20px 0;
+}
+
+.show-sidebar {
+    transform: translate(0%);
+}
+
+
+/* ----------------
+   Body Styles
+-------------------*/
+
+body {
+  margin-top: 6em;
+  font-family: "Crimson Text";
+}
+
+.overview,
+.article,
+.final {
+  font-weight: 300;
+  font-size: 18px;
+  color: #393939;
+  line-height: 1.4em;
+}
+
+/* --------------------------
+   Body Element Styles
+-----------------------------*/
+
+.firstcharacter {
+  float: left;
+  font-family: "Josefin Sans";
+  font-size: 75px;
+  line-height: 35px;
+  padding-top: 30px;
+  padding-right: 10px;
+  padding-left: 0px;
+}
+
+.quote {
+  margin-left: 1em;
+  margin-right: 2em;
+  font-style: italic;
+  font-size: 1.3em;
+  font-family: "Josefin Sans";
+  color: #333333;
+  margin: 40px 20px 0px 10px;
+  padding-left: 15px;
+
+}
+
+.author {
+  font-size: .7em;
+  text-align: right;
+  line-height: 1.3em;
+  background-color: #FFFFFF;
+  padding-bottom: 20px;
+}
+
+.box {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.disclaimer {
+  font-size: .8em;
+  line-height: 1.3em;
+}
+
+.title {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 1.2em;
+  color: #333333;
+}
+
+.chapter-title {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  color: #323232;
+  font-size: 38px;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-family: "Josefin Sans";
+  font-size: 28px;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.span {
+  display: block;
+  margin-bottom: 4em;
+}
+
+.span-sm {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.data {
+  text-align: center;
+  margin: 0 10%;
+}
+
+.finding {
+  font-family: "Josefin Sans";
+  font-size: 1.05em;
+  line-height: 1.15em;
+  color: #333333;
+  margin: 10px 0;
+}
+
+/* ----------------
+   Diagrams & Captions Styles
+-------------------*/
+.banner-caption {
+  font-style: italic;
+  text-align: center;
+  font-size: .8em;
+  font-family: "Tajawal";
+  color: #aaaaaa;
+  margin-top: .5%;
+}
+
+.banner-caption a{
+  color: #aaaaaa;
+}
+
+
+.caption {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.screenshot {
+  padding-bottom: 20px;
+}
+
+.visual-process-v {
+  display: none;
+  padding-top: 22px;
+}
+
+.visual-process-h {
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+.grapha,
+.graphb,
+.sketch-container {
+  text-align: center;
+}
+
+.diagrams {
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* ----------------
+Footer Styles
+------------------*/
+
+.top-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% 10%;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-footer {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: #000000;
+}
+
+
+/* ----------------
+   Media Queries
+-------------------*/
+
+/*---- Mobile View -----*/
+@media (max-width: 767px) {
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .grid-main {
+    margin: 5%;
+  }
+
+  .number {
+    display: none;
+  }
+}
+
+/*---- iPad View -----*/
+@media (min-width: 768px) {
+
+    .toggle {
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 18px;
+    }
+
+    .about-link {
+      margin: 0 80px;
+    }
+
+    a.link {
+      font-size: 16px;
+    }
+
+  .overview,
+  .article,
+  .final {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  .title {
+    font-size: 60px;
+    padding-top: 1em;
+  }
+
+  .firstcharacter {
+    line-height: 0;
+    padding-top: 39px;
+    font-size: 56px;
+    font-weight: bold;
+  }
+
+  .hr {
+    width: 70%;
+    text-align: left;
+    margin-left:0;
+    margin-bottom: 3em;
+  }
+
+  .grid-main {
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .number {
+    display: none;
+  }
+
+}
+
+/*---- Full Screen View -----*/
+
+@media (min-width: 845px) {
+
+  .visual-process-v {
+    display: inline;
+    width: 140%;
+  }
+
+  .visual-process-h {
+    display: none;
+  }
+
+  .number {
+    display:inline;
+    font-family: "Josefin Sans";
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 5px;
+    align-self: start;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .finding {
+    margin-bottom: 10px;
+  }
+
+  /* * * Grid System * * */
+
+  .grid-main {
+    margin: 0 auto;
+    display: grid;
+    width: 90%;
+    max-width: 970px;
+    grid-template-columns: auto 7% 7% 7% 7% 7% 7% 7% auto;
+    grid-template-rows: auto;
+    grid-gap: 0 3.5%;
+  }
+
+  .title,
+  .hr {
+    grid-column: 1 / span 9;
+  }
+  .overview,
+  .chapter-title,
+  .article,
+  .subtitle,
+  .graphs-table,
+  .span,
+  .sketch-container {
+    grid-column: 2 / span 7;
+  }
+
+  .para {
+    grid-column: 2 / span 7;
+  }
+
+  .number {
+    grid-column: 2 / span 1;
+  }
+
+  .finding {
+    grid-column: 3 / span 4;
+  }
+
+  .grapha {
+    grid-column: 7;
+    grid-row: 11 / span 3;
+  }
+
+  .graphb {
+    grid-column: 7;
+    grid-row: 53 / span 3;
+  }
+  .screenshot {
+    grid-column: 1 / span 9;
+    padding-bottom: 40px;
+  }
+
+  .final {
+    grid-column: 3 / span 6;
+  }
+
+  .subtitle {
+    align-self: end;
+  }
+
+  .span-sm {
+    display: block;
+    grid-column: 2;
+  }
+
+  .visual-process-v {
+    grid-column: 9;
+    grid-row: 6;
+    width: 100%;
+  }
+
+}
+
+/* ----------------
+   Fade-in on Load
+-------------------*/
+
+body {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

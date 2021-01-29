@@ -1,0 +1,427 @@
+* {
+  box-sizing: border-box;
+}
+
+/* --------------
+Link Styles
+----------------- */
+#navbar a {
+  text-decoration: none;
+  color: #393939;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+#navbar a:hover {
+  color: #000000;
+}
+
+#navbar current-link {
+  color: #000000;
+  font-family: "Josefin Sans", serif;
+}
+
+#navbar a.link{
+  position: relative;
+  font-size: 14px;
+}
+
+.nav-links a.link:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background: #AF8976;
+  border-radius: 300px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link:hover:before{
+  width: 100%;
+  visibility: visible;
+}
+
+
+.hotlink {
+  color: #8D524E;
+}
+
+.hotlink:hover {
+  color: #d17445;
+}
+
+/* --------------
+Navbar Styles
+-----------------*/
+#navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1000px;
+  background: #FFFFFF;
+  top: 0;
+  padding: 1% 5% 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-family: "Josefin Sans";
+  color: #333333;
+  text-align: center;
+  margin-top: 18px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.toggle-spin {
+  transform: rotate(90deg);
+}
+
+/*---- Aside ----*/
+.sidebar {
+  text-align: left;
+  width: 150px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1001;
+  right:0;
+  top: 55px;
+  transform: translate(100%);
+  transition: transform .5s;
+}
+
+.sidebar-links {
+  padding: 0px 40px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.sidebar-links li {
+  padding: 20px 0;
+}
+
+.show-sidebar {
+    transform: translate(0%);
+}
+
+
+/* ----------------
+   Body Styles
+-------------------*/
+
+body {
+  margin-top: 6em;
+  font-family: "Crimson Text";
+  font-weight: 300;
+  color: #393939;
+}
+
+.rest {
+  font-family: "Josefin Sans";
+  font-size: 3.5em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: "Crimson Text";
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.container,
+.main {
+  padding: 0% 8%;
+}
+
+.bodytext,
+.main {
+  font-family: "Crimson Text";
+  font-size: 18px;
+  line-height: 1.4em;
+  padding-top: 5%;
+}
+
+.subtitle {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
+.firstcharacter {
+  font-weight: bold;
+  float: left;
+  font-family: "Josefin Sans";
+  font-size: 75px;
+  padding-top: 35px;
+  padding-right: 10px;
+  padding-left: 0px;
+}
+
+.spacer {
+  display: block;
+  padding: 20px;
+}
+
+.lg-spacer {
+  display: block;
+  padding: 40px;
+}
+.box {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+}
+
+/* ---------------
+Images/Graph/Caption Styles
+------------------*/
+img {
+
+}
+
+.banner,
+.old-image,
+.res-image {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.res-img-div {
+  text-align: center;
+}
+.image-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.graphtable, {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.wireframes-div, {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wireframe {
+  width: 30%;
+  margin: 0 5px
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.final-image {
+  max-width: 80%;
+}
+
+/* ----------------
+Footer Styles
+------------------*/
+
+.top-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% 10%;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-footer {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+}
+/* ---------------
+Media Queries
+------------------*/
+
+/* Tablet View */
+@media (min-width: 600px) {
+
+  body {
+    margin-top: 130px;
+  }
+
+  .bodytext,
+  .main {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  .firstcharacter {
+    font-size: 85px;
+    padding-top: 40px;
+  }
+
+  .about-link {
+    margin: 0 50px;
+  }
+
+  a.link {
+    font-size: 16px;
+  }
+
+  .about {
+    margin: 0 80px;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  #navbar a.link {
+    font-size: 16px;
+  }
+
+  .graphtable,
+  .wireframes-div {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  .wireframe {
+    margin: 0 10px
+  }
+
+  .image-div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .final-image {
+    max-width: 50%;
+  }
+
+}
+
+/* Full Screen */
+
+@media (min-width: 941px) {
+
+  body {
+    margin-top: 6%;
+  }
+
+  .container {
+    margin: 0 auto;
+    display: grid;
+    padding-top: 5%;
+    max-width: 1150px;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: auto;
+    grid-gap: 0 3.5%;
+  }
+  .title {
+    text-align: right;
+  }
+
+  .rest {
+    font-size: 5em;
+    line-height: 1em;
+  }
+
+  .description {
+    grid-column: 1;
+    padding-left: 30%;
+    font-size: 1.3em;
+  }
+
+  .banner {
+    margin-top: 0;
+  }
+
+  .bodytext {
+    grid-column: 2;
+  }
+
+  .main {
+    margin: 0 14%;
+  }
+}
+
+/* ----------------
+   Fade-in on Load
+-------------------*/
+
+body {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

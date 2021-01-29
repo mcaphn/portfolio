@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A UX Report on Terra Cafe's Website Redesign by Mica Phan">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="../css/terra.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Tajawal:wght@300;500&family=Josefin+Sans&display=swap" rel="stylesheet">
+
+  <title>Terra Cafe Website</title>
+</head>
+<body>
+<header>
+  <div id="navbar">
+    <a class="logo" class="link" href="../index.html">MICA PHAN</a>
+    <ul class="nav-links">
+      <li><a class="link" href="../index.html#work">Work</a></li>
+      <li><a class="link about" href="../about.html">About</a></li>
+      <li><a class="link" href="#">Contact</a></li>
+    </ul>
+    <button class="toggle">
+      <svg viewBox="-20 0 120 50" width="40" height="45">
+        <rect width="80" height="8" rx="8"></rect>
+        <rect y="20" width="80" height="8" rx="8"></rect>
+        <rect y="40" width="80" height="8" rx="8"></rect>
+      </svg>
+    </button>
+
+    <aside class="sidebar">
+      <ul class="sidebar-links">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="../about.html">About</a>
+        </li>
+        <li>
+          <a href="../index.html#work">Work</a>
+        </li>
+        <li>
+          <a href="../contact.html">Contact</a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <div class="container">
+    <div class="title"><span class="rest">Terra Cafe</span>
+    <div class="description">In the midst of a pandemic, a local cafe and its customers were in need of safe and reliable solutions in order to adjust to a new way of life.</div></div>
+    <div class="banner-div">
+      <img class="banner" src="img/dan-burton.jpg" alt="Gloved barista serving coffee to customer" width="100%" height="100%">
+      <figcaption style="text-align:center;">iPhoto by Dan Burton on Unsplash</figcaption>
+    </div>
+    <div class="bodytext"><span class="firstcharacter">I</span> was very fortunate to work closely with the owners, staff, and customers of Terra Cafe, a local and family-owned coffeeshop in Fairfield County. When COVID-19 was at its peak, local and state regulations required Terra Cafe to close off its small indoor dining space. Curbside service was implemented and customers were required to order over the phone. This unexpected change caused real-time customer experience issues that needed fast and effective solutions both internally and externally.
+    <span class="spacer"></span>
+    Relevant to the situation, below is a report detailing the UX techniques and strategies I used to redesign the cafe's website, and the custom coding I created for its responsive online menu.
+    <span class="spacer"></span>
+      <div class="box">
+        <b>Role:</b> Lead UX Designer, Front-End Developer<br>
+        <b>Timeline:</b> One week, December 2020<br>
+        <b>Tools:</b> Adobe XD, Squarespace<br>
+        <b>Skills:</b> Content Strategy, Field Research, HTML/CSS<br>
+        <b>Purpose:</b> Paid Project<br>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="main">
+    <span class="spacer"></span>
+    <div class="subtitle">Observation</div>
+     Due to its small indoor space, Terra had to restrict its customers from entering the cafe. Orders could only be placed over the phone. A menu was available on Terra’s website, but walk-up customers had difficulty reading the PDF menu on their mobile phones. Due to its layout, customers would zoom in and swipe around to read item descriptions, but the text was too pixelated to read legibly (see image below). A QR code was eventually posted outside the building that was a direct link to a downloadable PDF of the menu with a higher resolution. Many utilized the QR code. Some resorted to knocking on the door to ask for a physical menu. Few tried to peek through the window to read the inside menu on the back wall. Others only ordered off the "Specials" chalkboard nailed to the building's exterior wall.
+    <span class="spacer"></span>
+    <div class="old-image-div"><img class="old-image" src="img/oldmenu.png" alt="Mobile view of the old menu"  width="100%" height="100%"><figcaption>Pretty design, but zoom in and it's barely legible.</figcaption></div>
+    <span class="spacer"></span>
+    Another common question was where one could learn of the cafe's latest specials (<a class="hotlink" href="https://medium.com/@atumio/how-restaurants-can-get-better-returns-on-their-daily-specials-54da672cd09f" target="_blank" rel="noopener">this Medium article</a> gives great insight on why specials are beneficial to both customer and restaurant). At the time, customers could only learn of the specials either through Terra’s Instagram account, physically visiting the special’s board outside the building, or calling to ask staff to read off the list of specials over the phone. Those are all valid alternatives but none so easy or reliable.
+    <span class="lg-spacer"></span>
+    <div class="subtitle">Solution</div>
+    It was clear to me that the customer's ordering experience needed improvement. Fixing the website seemed to be the answer. The website, accessible on any mobile device, can deliver necessary content to customers and help them complete their goal. With a limited budget and a short timeline, I decided to attack the aforementioned pain-points by primarily focusing on two solutions:
+    <span class="spacer"></span>
+    1. Create a responsive and mobile-friendly menu easy to access and read.<br>
+    2. Connect the cafe's Instagram account to the website (and Facebook page) so customers are up-to-date across multiple platforms.
+    <span class="lg-spacer"></span>
+    <div class="subtitle">Web Analytics</div>
+    After gaining access to the cafe's Squarespace account, a look at the cafe's website analytics provided quantitative data that proved the necessity for a mobile-friendly design. Data showed that most customers viewed the website and menu on their mobile device, even before the pandemic.
+    <span class="spacer"></span>
+    <div class="graphtable">
+      <div>
+        <img src="img/graph-2019.png"  width="auto" height="230px" alt="Graph of 2019 Web Analytics">
+        <br>
+        2019 Pageviews:<br>
+                 &nbsp;Mobile visits: 7,449<br>
+                 &nbsp;Desktop visits: 2,156<br>
+      </div>
+      <span class="spacer"></span>
+      <div>
+        <img src="img/graph-2020.png" width="auto" height="230px" alt="Graph of 2020 Web Analytics">
+        <br>
+        2020 Pageviews:<br>
+                   &nbsp;Mobile visits: 14,805<br>
+                   &nbsp;Desktop visits: 3,436<br>
+        </div>
+    </div>
+    <span class="spacer"></span>
+    Compared to 2019, Terra received 2x as many mobile visits year to year, and a 86% visit increase.
+    <span class="lg-spacer"></span>
+    <div class="subtitle">User Research</div>
+    To ensure I was designing for Terra's customers, I performed field research to create a user persona. Over three shifts, I gathered data from 87 customers. 62% of Terra customers were females. Of the females, 51% were between 30-45 years old. My field research did not double-count repeat customers ("regulars"). In addition to light converstions with this sample group, as well as living within this community, I factored in my user persona that most of Terra's customers were employed and had children.
+    <span class="spacer"></span>
+    <div class="res-img-div"><img class="res-image" src="img/tally.jpg" alt="Picture of tallying data"  width="80%" height="80%"><figcaption>My crude note-taking on customer data.</figcaption></div>
+    <span class="spacer"></span>
+    <div class="res-img-div"><img class="res-image" src="img/userpersona.jpg" alt="User Persona of Millenial Mom Megan"  width="80%" height="80%"></div>
+    <span class="lg-spacer"></span>
+    <div class="subtitle">Content & Design Strategy</div>
+    In my design I decided on strategic design elements to implement user experience acquisition strategies and draw customer attention.
+    <span class="spacer"></span>
+    &#10003; A vertical layout to accommodate the high number of mobile views.
+    <span class="spacer"></span>
+    &#10003; The inclusion of images as a merchandising tool, drawing attention to high margin items to up-sell orders.
+    <span class="spacer"></span>
+    &#10003; Informational heirarchy that places key information at the header and footer on every page (name, location, hours, phone number, and any COVID-19 related updates).
+    <span class="spacer"></span>
+    &#10003; A more informative 'About Us' page reflective of the unique service the cafe offers to all its guests, including customer testimonials. This practice of transparency helps prospective customers understand the values of the cafe, forming expectations and building trust.
+    <span class="spacer"></span>
+    Below are wireframes for the homepage, about us, and menu page:
+    <span class="spacer"></span>
+    <div class="wireframes-div">
+      <img class="wireframe" src="img/wireframe-home.png" alt="Homepage Wireframe" width="100%" height="100%">
+      <img class="wireframe" src="img/wireframe-menu.png" alt="Menu Wireframe"  width="100%" height="100%">
+      <img class="wireframe" src="img/wireframe-about.png" alt="About Us Page Wireframe"  width="100%" height="100%">
+    </div>
+    <span class="lg-spacer"></span>
+    <div class="subtitle">Final Design</div>
+    The final design - Terra's Instagram is now linked to post onto the website's landing page, so customers can easily find information about new specials and updates. The final "About Us" page give customers a more personal look into the cafe's values and personality:
+    <span class="spacer"></span>
+    <div class="image-div">
+      <img class="final-image" src="img/web-home.png" alt="The redesigned homepage" width="100%" height="100%">
+      <span class="spacer"></span>
+      <img class="final-image" src="img/web-about.jpg" alt="The redesigned About Us page" width="100%"  height="100%">
+    </div>
+    <span class="spacer"></span>
+    And below is the final Menu design in desktop and mobile view - I created custom HTML and CSS coding for the menu using a grid system layout. No zooming necessary.
+    <span class="spacer"></span>
+    <div class="image-div">
+      <img class="image" src="img/terramaciphone.png" alt="Mockup image of a responsive menu" width="100%" height="100%">
+    </div>
+    <span class="spacer"></span>
+    Click this link to view Github of code: <a href="https://github.com/mcaphn/terramenu" class="hotlink" target="_blank" rel="noopener">View Github</a>
+    <span class="spacer"></span>
+    Click here to view the Terra Cafe website: <a href="https://www.terracafect.com" class="hotlink" target="_blank" rel="noopener">www.terracafect.com</a>
+    <span class="lg-spacer"></span>
+    <div class="subtitle">Self-reflection</div>
+    This was my first application and experience using Squarespace. I embraced a clean and simple look in accordance to the client's wishes. I found that this allowed for more intentional design decisions, minimized complexity for the user, and put focus on the most important elements.
+    <span class="spacer"></span>
+    Because of COVID-19, small businesses everywhere are in need of effective help in a timely fashion. I was happy to provide Terra Cafe with a quick and easy redesign and solutions that will hopefully increase their customer acquisition and retention as they continue business during these trying times.
+  </div>
+
+  <span class="span"></span>
+
+  <a href="#" class="top-btn hotlink">Back to Top</a>
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+<footer>
+<div class="main-footer">©2020 Built by Mica Phan</div>
+</footer>
+</html>

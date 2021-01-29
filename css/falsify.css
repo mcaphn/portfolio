@@ -1,0 +1,475 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Crimson Text";
+  font-weight: 300;
+  color: #3E3E3E;
+}
+
+/* --------------
+Link Styles
+----------------- */
+a {
+  text-decoration: none;
+  color: #707070;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.current-link {
+  color: #000000;
+  font-family: "Josefin Sans", serif;
+}
+
+a.link{
+  position: relative;
+  font-size: 14px;
+}
+
+a.link:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: #AF8976;
+  border-radius: 300px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link:hover:before{
+  width: 100%;
+  visibility: visible;
+}
+
+
+.about-link {
+  margin: 0 20px;
+}
+
+/* --------------
+Navbar Styles
+-----------------*/
+#navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: #FFFFFF;
+  top: 0;
+  padding: 1% 5% 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Josefin Sans";
+  color: #333333;
+  text-align: center;
+  margin-top: 18px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+.intro-logo {
+  font-family: "Josefin Sans";
+  font-size: 24px;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.intro {
+  padding: 100px 20px 0px 20px;
+  background-color: #ffffff;
+  z-index: 1;
+  text-align: center;
+
+}
+
+.button {
+  margin: 30px auto 0px auto;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button:hover {
+  color: #000000;
+}
+
+/* ----------------
+ CONTAINER Styles
+------------------*/
+
+  .container {
+    background-color: #FFF2E3;
+    min-width: 450px;
+  }
+
+  /* --- Navigation Styles ---*/
+
+  .fa-navbar {
+    width: 100%;
+    padding: 2% 5% 0% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fa-logo {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-right: 15px;
+  }
+
+
+  .fa-nav button,
+  .fa-nav-2 button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 1rem;
+    margin: 0;
+    font-family: "Montserrat";
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #FFF2E3;
+    color: #323232;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .horizontal-menu {
+    display: none;
+  }
+
+  /* --- Sidebar Styles ---*/
+    .menu {
+      font-family: "Montserrat";
+      font-size: 14px;
+      letter-spacing: .08em;
+      line-height: 1.5em;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 375;
+      left: 0;
+      width: 300px;
+      height: 650px;
+      background-color: #FFFFFF;
+      transform: translate(-100%);
+      transition: .5s ease-in-out;
+    }
+
+    .show-sidebar {
+      transform: translate(0);
+    }
+
+    .sidebar-toggle {
+      font-size: 1.5em;
+      margin-right: 20px;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer;
+    }
+
+  /* --- Product Item Styles ---*/
+
+
+  .products-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .product-container {
+    flex: 1;
+    flex-basis: 50%;
+    color: #404040;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .breadcrumb {
+    padding: 20px 0px 10px 40px;
+  }
+
+  .category,
+  .price,
+  .breadcrumb {
+    font-family: "Montserrat";
+    font-size: 13px;
+    letter-spacing: .08em;
+  }
+
+  .thumb-img {
+    margin: 0 auto;
+    padding: 8% 0%;
+    width: 70%;
+  }
+
+  .name {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  .price {
+    padding: 20px 0px;
+  }
+
+  .dbl-buttons button {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #707070;
+    padding: 14px 20px 12px 20px;
+    margin: 0 auto;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #FFF2E3;
+    color: #323232;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .dbl-buttons button:hover,
+  .dbl-buttons button:focus {
+    border: none;
+    background-color: #414141;
+    color: #ffffff;
+  }
+
+  .add-btn {
+    visibility: hidden;
+  }
+
+  /* ----------------
+   Item Modal Styles
+  ------------------*/
+
+  .modal-overlay {
+    position: fixed;
+    top: 25%;
+    right: 25%;
+    z-index: 1;
+    display: none;
+  }
+
+  .show-modal {
+    display: inline-block;
+  }
+
+  .modal-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    width: 650px;
+    height: 400px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .rightside,
+  .leftside {
+    text-align: center;
+  }
+
+  .rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1% 0;
+    margin: 0 auto;
+  }
+
+  .close-btn {
+    border: none;
+    padding: 10px 12px;
+    margin: 0px 15% 0px 85%;
+    background-color: #ffffff;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #414141;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: right;
+  }
+
+  .add-btn {
+    border: solid 1px #414141;
+    padding: 14px 20px 12px 20px;
+    margin: 0 auto;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #414141;
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .add-btn:hover {
+    border: solid 1px #414141;
+    background-color: #ffffff;
+    color: #414141;
+  }
+
+  .rating {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .swap-pics {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .circle {
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+  border: 3px solid #ffffff;
+}
+
+
+
+  .circle2 {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  .circle:focus,
+  .circle2:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.8);
+  }
+
+
+/* ----------------
+ Footer Styles
+------------------*/
+
+.main-footer {
+  position: sticky;
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: #333333;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2;
+
+}
+
+/* ---------------
+Media Queries
+-----------------*/
+/* Tablet View */
+@media (min-width: 987px) {
+
+  .about {
+    margin: 0 80px;
+  }
+
+  a.link {
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 20px 50px;
+  }
+
+  /*----- Container Styles ------*/
+
+
+
+      .fa-navbar {
+        width: 100%;
+        padding: 16px 5% 0% 5%;
+      }
+
+      .sidebar-toggle {
+        display: none;
+      }
+
+      .fa-nav-1 {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .horizontal-menu {
+        display: inline;
+      }
+
+      .dbl-buttons button {
+        display: inline-block;
+      }
+
+      .products-flexbox {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+
+      .products-flexbox::-webkit-scrollbar {
+        display: none;
+      }
+
+      .product-container {
+        flex: 0 0 350px;
+        margin-bottom: 20px;
+        border-right: 1px solid #b3b3b3;
+      }
+
+      .breadcrumb {
+        padding: 20px 0px 10px 80px;
+      }
+
+      .thumb-img {
+        width: 60%;
+      }
+
+      .add-btn {
+        visibility: visible;
+      }
+}

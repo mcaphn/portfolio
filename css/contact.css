@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EBE4DD;
+}
+/* --------------
+Link Styles
+----------------- */
+a {
+  text-decoration: none;
+  color: #393939;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.current-link {
+  color: #000000;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+a.link{
+  position: relative;
+  font-size: 18px;
+}
+
+a.link:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background: #AF8976;
+  border-radius: 300px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link:hover:before{
+  width: 100%;
+  visibility: visible;
+}
+
+.button {
+  margin: 0 auto;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px 8px 20px;
+  border: solid 1px #393939;
+  align-self: flex-end;
+}
+
+
+.button:hover {
+  color: #ffffff;
+  background-color: #AF8976;
+  border: none;
+}
+
+/* --------------
+Navbar Styles
+-----------------*/
+#navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: #EBE4DD;
+  top: 0;
+  padding: 1% 5% 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Josefin Sans";
+  color: #333333;
+  text-align: center;
+  margin-top: 18px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: transform .5s;
+}
+
+.toggle-spin {
+  transform: rotate(90deg);
+}
+
+
+/*---- Aside ----*/
+.sidebar {
+  text-align: left;
+  width: 150px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1001;
+  right:0;
+  top: 55px;
+  transform: translate(100%);
+  transition: transform .5s;
+}
+
+.sidebar-links {
+  padding: 0px 40px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.sidebar-links li {
+  padding: 20px 0;
+}
+
+.show-sidebar {
+    transform: translate(0%);
+}
+
+/* --------------
+Banner Styles
+-----------------*/
+.banner {
+  margin: 0 auto;
+  padding: 150px 0;
+  text-align: center;
+}
+.container-banner {
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.heading{
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #393939;
+  font-size: 18px;
+}
+
+
+.info {
+  font-family: "Jost";
+  font-weight: 300;
+  color: #393939;
+  font-size: 16px;
+}
+
+.span {
+  display: block;
+  margin: 2em;
+}
+
+
+.container-banner {
+  animation-name: fadeIn;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both; /* starts with 1st keyframe style (opacity:0), and finishes with last keyframe style (opacity: 100) */
+}
+
+.hr-1,
+.hr-2 {
+  width: 0;
+  animation-name: grow;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+/* ----------------
+Footer Styles
+------------------*/
+
+.main-footer {
+  position: sticky;
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: #393939;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2;
+
+}
+
+
+/* ---------------
+Media Queries
+-----------------*/
+
+/* Tablet View */
+@media (min-width: 702px) {
+
+  .toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  .about-link {
+    margin: 0 80px;
+  }
+
+  a.link {
+    font-size: 16px;
+  }

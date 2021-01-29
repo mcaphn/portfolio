@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Crimson Text";
+  font-weight: 300;
+  background-color: #EBE4DD;
+  overflow-x: hidden;
+}
+
+/* --------------
+Link Styles
+----------------- */
+a {
+  text-decoration: none;
+  color: #393939;
+  font-family: "Josefin Sans", serif;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.current-link {
+  color: #000000;
+  font-family: "Josefin Sans", serif;
+}
+
+a.link{
+  position: relative;
+  font-size: 14px;
+}
+
+a.link:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: #AF8976;
+  border-radius: 300px;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link:hover:before{
+  width: 100%;
+  visibility: visible;
+}
+
+
+.about-link {
+  margin: 0 20px;
+}
+
+a.hotlink {
+  font-family: "Jost";
+  text-decoration: underline;
+  color: #8D524E;
+  font-style: italic;
+}
+
+.button {
+  margin: 0 auto;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 20px 8px 20px;
+  border: solid 1px #393939;
+}
+
+
+.button:hover {
+  color: #ffffff;
+  background-color: #AF8976;
+  border: none;
+}
+
+/* --------------
+Navbar Styles
+-----------------*/
+#navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: #EBE4DD;
+  top: 0;
+  padding: 1% 5% 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Josefin Sans";
+  color: #393939;
+  text-align: center;
+  margin-top: 18px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-links {
+  display: none;
+}
+
+.toggle {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+
+  transition: transform .5s;
+}
+
+.toggle-spin {
+  transform: rotate(90deg);
+}
+
+
+/*---- Aside ----*/
+.sidebar {
+  text-align: left;
+  width: 150px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 1001;
+  right:0;
+  top: 55px;
+  transform: translate(100%);
+  transition: transform .5s;
+}
+
+.sidebar-links {
+  padding: 0px 40px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.sidebar-links li {
+  padding: 20px 0;
+}
+
+.show-sidebar {
+    transform: translate(0%);
+}
+
+
+/* --------------
+General Styles
+-----------------*/
+
+.content {
+  margin: 0% 10%;
+  font-size: 1.15em;
+  line-height: 1.2em;
+}
+
+.title,
+.category li:first-child {
+  font-family: "Josefin Sans";
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #393939;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.skills-container,
+.questions {
+  margin: 50px auto;
+}
+
+.hr {
+  width: 20%;
+}
+
+/* --------------
+About Section Styles
+-----------------*/
+
+.aboutblock {
+  height: 100%;
+  margin: 65px auto;
+  text-align: center;
+  max-width: 650px;
+}
+
+.about.title {
+  padding-bottom: 20%;
+}
+
+.photo {
+  margin: 15% 0;
+  border-radius: 15px;
+}
+
+.vr {
+  border-left: 1px solid #333333;
+  height: 40px;
+  position: relative;
+  left: 50%;
+  top: 0;
+}
+
+.para {
+  font-family: "Jost";
+  font-size: 16px;
+  margin: 20px auto;
+  max-width: 425px;
+}
+
+/* --------------
+Skills Styles
+-----------------*/
+
+ul {
+  padding-left: 0;
+}
+
+.category {
+  padding: 0px 25px;
+}
+
+.list-col{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+.list-col li {
+  font-family: "Jost";
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+/* --------------
+Q&A Styles
+-----------------*/
+
+.questions {
+  margin: 100px auto;
+  max-width: 600px;
+  font-family: "Jost";
+  font-size: 16px;
+}
+
+.questions .title {
+  text-align: center;
+}
+
+.query {
+  /* font-weight: 600; */
+  font-family: "Jost";
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.4em;
+  margin: 40px 0px;
+}
+
+/* ----------------
+Footer Styles
+------------------*/
+
+.main-footer {
+  position: sticky;
+  font-family: "Josefin Sans";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: #333333;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2;
+
+}
+
+/* ---------------
+Media Queries
+-----------------*/
+/* Tablet View */
+@media (min-width: 702px) {
+
+  .toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  .about-link {
+    margin: 0 80px;
+  }
+
+  a.link {
+    font-size: 16px;
+  }
+
+  .aboutblock {
+    margin: 80px auto;
+  }
+
+  .photo {
+    width: 250px;
+  }
+
+  .para {
+    max-width: 670px;
+    margin: 20px 38px;
+  }
+
+  .skills-container {
+    max-width: 865px;
+    margin-top: 80px;
+  }
+
+}
+
+/* Full Screen */
+
+@media (min-width: 1148px) {
