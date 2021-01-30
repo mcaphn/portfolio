@@ -1,20 +1,36 @@
+//---- Variables ----//
+$font-primary: 'Josefin Sans', sans-serif;
+$font-secondary: 'Jost', sans-serif;
+$font-tertiary: 'Crimson Text', serif;
+
+$background-color: #EBE4DD;
+$complement-color:#AF8976;
+$main-font-color: #393939;
+
+//----- Mixins ----//
+@mixin flex($direction: column, $justify: space-between) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+
 * {
   box-sizing: border-box;
 }
 
 html,
-body {
+body
+{
   margin: 0;
-  height: 100%;
+  height: 100%
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flex(column);
   font-weight: 300;
-  color: #393939;
-  background-color: #EBE4DD;
+  color: $main-font-color;
+  background-color: $background-color;
 }
 
 .content {
@@ -29,49 +45,54 @@ Link Styles
 ----------------- */
 li a {
   text-decoration: none;
-  color: #393939;
-  font-family: "Josefin Sans", sans-serif;
+  color: $main-font-color;
+  font-family: $font-primary;
   font-weight: 400;
-}
-li a:hover {
-  color: #000000;
-}
-li a.link {
-  position: relative;
-  font-size: 18px;
-}
-li a.link:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  bottom: -3px;
-  left: 0;
-  background: #AF8976;
-  border-radius: 300px;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-li a.link:hover:before {
-  width: 100%;
-  visibility: visible;
+
+  &:hover {
+    color: #000000;
+  }
+
+  &.link {
+    position: relative;
+    font-size: 18px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 3px;
+      bottom: -3px;
+      left: 0;
+      background: $complement-color;
+      border-radius: 300px;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover:before{
+      width: 100%;
+      visibility: visible;
+    }
+  }
 }
 
 .button {
   margin: 0 auto;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: $font-primary;
   text-transform: uppercase;
   font-size: 14px;
   padding: 10px 20px 8px 20px;
-  border: solid 1px #393939;
+  border: solid 1px $main-font-color;
   color: #000000;
   text-decoration: none;
   align-self: flex-end;
-}
-.button:hover {
+
+  &:hover {
   color: #ffffff;
-  background-color: #AF8976;
-  border: solid 1px #EBE4DD;
+  background-color: $complement-color;
+  border: solid 1px $background-color;
+  }
 }
 
 /* --------------
@@ -82,11 +103,10 @@ Navbar Styles
   position: fixed;
   z-index: 1001;
   top: 0;
-  padding: 0.5% 5% 0.5% 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: .5% 5% .5% 5%;
+  @include flex(row);
 }
+
 
 li {
   list-style-type: none;
@@ -100,7 +120,7 @@ li {
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: transform .5s;
   outline: none;
   position: relative;
   z-index: 1002;
@@ -110,16 +130,19 @@ li {
   transform: rotate(90deg);
 }
 
+
 /*---- Aside ----*/
 .sidebar {
   text-align: left;
   width: 150px;
   height: 100vh;
   background-color: rgba(175, 137, 118, 0.6);
+  // background-color: $background-color;
+  // border-left: 1px solid $main-font-color;
   position: absolute;
-  right: 0;
+  right:0;
   transform: translate(100%);
-  transition: transform 0.5s;
+  transition: transform .5s;
 }
 
 .sidebar-links {
@@ -128,14 +151,16 @@ li {
   font-size: 18px;
   position: absolute;
   top: 20%;
-}
-.sidebar-links li {
+
+  li {
   padding: 20px 0;
+  }
 }
 
 .show-sidebar {
-  transform: translate(0%);
+    transform: translate(0%);
 }
+
 
 /* --------------
 Banner Styles
@@ -143,14 +168,13 @@ Banner Styles
 .banner {
   margin: 270px auto 150px auto;
 }
-
 .container-banner {
   margin: 50px 12%;
 }
 
 .myname {
-  font-family: "Josefin Sans", sans-serif;
-  color: #393939;
+  font-family: $font-primary;
+  color: $main-font-color;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -158,18 +182,20 @@ Banner Styles
 }
 
 .roles {
-  font-family: "Crimson Text", serif;
+  font-family: $font-tertiary;
   font-weight: 300;
   font-style: italic;
   font-size: 18px;
   margin-top: 20px;
 }
 
+
 .line {
-  content: "";
-  border-top: 1px solid #393939;
+  content: '';
+  border-top: 1px solid $main-font-color;
   width: 183px;
 }
+
 
 .banner,
 .content {
@@ -180,8 +206,9 @@ Banner Styles
 }
 
 .content {
-  animation-delay: 0.5s;
+  animation-delay: .5s;
 }
+
 
 @keyframes fadeIn {
   from {
@@ -191,36 +218,38 @@ Banner Styles
     opacity: 100%;
   }
 }
+
+
+
 /* --------------
 "Work" Container Styles
 -----------------*/
+
 .col {
   padding: 30px;
   border-top-style: solid;
   border-width: 1px 0px;
-  border-color: #393939;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-color: $main-font-color;
+  @include flex;
 }
 
 .subtitle {
   font-size: 1.3em;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: $font-primary;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 .category {
-  font-family: "Jost", sans-serif;
+  font-family: $font-secondary;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 1.3em;
 }
 
 .description {
-  font-family: "Jost", sans-serif;
+  font-family: $font-secondary;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.3em;
@@ -241,32 +270,34 @@ Banner Styles
 /* ----------------
 Footer Styles
 ------------------*/
+
 .main-footer {
   position: sticky;
-  font-family: "Jost", sans-serif;
+  font-family: $font-secondary;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
-  color: #393939;
+  color: $main-font-color;
   padding-top: 20px;
   padding-bottom: 20px;
   z-index: 1002;
+
 }
 
 /* ---------------
 Media Queries
 -----------------*/
+
 /* Tablet View */
 @media (min-width: 750px) {
+
   .toggle {
     display: none;
   }
 
   .nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex(row, space-between);
     margin-top: 18px;
   }
 
@@ -283,11 +314,11 @@ Media Queries
   }
 
   /*---- "Work" Container--- */
+
   .container {
     padding: 0% 2%;
     min-width: 90%;
-    display: flex;
-    justify-content: space-between;
+    @include flex($direction:null);
     flex-wrap: wrap;
   }
 
@@ -295,6 +326,7 @@ Media Queries
     flex: 1;
     flex-basis: 50%;
   }
+
 
   .subtitle {
     font-size: 1em;
@@ -308,20 +340,24 @@ Media Queries
     text-align: center;
   }
 
+
   .one,
-.three,
-.five {
+  .three,
+  .five {
     border-right-style: solid;
     border-width: 1px;
   }
 
   .five,
-.six {
+  .six {
     border-bottom-style: solid;
     border-width: 1px;
   }
 }
+
+
 /* Full Screen */
+
 @media (min-width: 1217px) {
   .content {
     margin: 0 10%;
@@ -336,7 +372,7 @@ Media Queries
   }
 
   .two,
-.four {
+  .four {
     border-right-style: solid;
     border-width: 1px;
   }
@@ -350,5 +386,3 @@ Media Queries
     border-width: 1px;
   }
 }
-
-/*# sourceMappingURL=index.css.map */
