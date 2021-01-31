@@ -17,13 +17,6 @@ body {
   background-color: #EBE4DD;
 }
 
-.content {
-  font-size: 1.15em;
-  line-height: 1.5em;
-  margin: 0px 5%;
-  padding-top: 70px;
-}
-
 /* --------------
 Link Styles
 ----------------- */
@@ -58,10 +51,10 @@ li a.link:hover:before {
 }
 
 .button {
-  margin: 0 auto;
   font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
   font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 auto;
   padding: 10px 20px 8px 20px;
   border: solid 1px #393939;
   color: #000000;
@@ -115,7 +108,7 @@ li {
   text-align: left;
   width: 150px;
   height: 100vh;
-  background-color: rgba(175, 137, 118, 0.6);
+  background-color: rgba(175, 137, 118, 0.7);
   position: absolute;
   right: 0;
   transform: translate(100%);
@@ -150,18 +143,18 @@ Banner Styles
 
 .myname {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
   color: #393939;
   font-weight: 400;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 24px;
 }
 
 .roles {
   font-family: "Crimson Text", serif;
+  font-size: 18px;
   font-weight: 300;
   font-style: italic;
-  font-size: 18px;
   margin-top: 20px;
 }
 
@@ -194,36 +187,43 @@ Banner Styles
 /* --------------
 "Work" Container Styles
 -----------------*/
+.content {
+  font-size: 1.15em;
+  line-height: 1.5em;
+  margin: 0px 5%;
+  padding-top: 70px;
+}
+
 .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 30px;
   border-top-style: solid;
   border-width: 1px 0px;
   border-color: #393939;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .subtitle {
-  font-size: 1.3em;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-size: 1.3em;
   text-transform: uppercase;
+  font-weight: 400;
   letter-spacing: 0.03em;
 }
 
 .category {
   font-family: "Jost", sans-serif;
-  text-transform: uppercase;
   font-size: 18px;
   line-height: 1.3em;
+  text-transform: uppercase;
 }
 
 .description {
   font-family: "Jost", sans-serif;
-  font-weight: 300;
   font-size: 16px;
   line-height: 1.3em;
+  font-weight: 300;
   padding-top: 30px;
 }
 
@@ -242,11 +242,11 @@ Banner Styles
 Footer Styles
 ------------------*/
 .main-footer {
-  position: sticky;
   font-family: "Jost", sans-serif;
-  font-weight: 500;
+  font-size: 14px;
   text-transform: uppercase;
-  font-size: 12px;
+  position: sticky;
+  font-weight: 500;
   text-align: center;
   color: #393939;
   padding-top: 20px;
@@ -284,10 +284,10 @@ Media Queries
 
   /*---- "Work" Container--- */
   .container {
-    padding: 0% 2%;
-    min-width: 90%;
     display: flex;
     justify-content: space-between;
+    padding: 0% 2%;
+    min-width: 90%;
     flex-wrap: wrap;
   }
 
@@ -296,7 +296,7 @@ Media Queries
     flex-basis: 50%;
   }
 
-  .subtitle {
+  s .subtitle {
     font-size: 1em;
   }
 
