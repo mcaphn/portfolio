@@ -138,7 +138,12 @@ li {
   right:0;
   transform: translate(100%);
   transition: transform .5s;
+
+  a {
+      color: #ffffff;
+  }
 }
+
 
 .sidebar-links {
   padding: 0px 50px;

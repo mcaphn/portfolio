@@ -115,6 +115,10 @@ li {
   transition: transform 0.5s;
 }
 
+.sidebar a {
+  color: #ffffff;
+}
+
 .sidebar-links {
   padding: 0px 50px;
   text-align: right;

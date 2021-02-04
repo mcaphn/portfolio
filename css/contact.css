@@ -134,6 +134,10 @@ li {
   padding: 20px 0;
 }
 
+.sidebar a {
+  color: #ffffff;
+}
+
 .show-sidebar {
   transform: translate(0%);
 }
