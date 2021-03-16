@@ -31,7 +31,7 @@ li a:hover {
 }
 li a.link {
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
 }
 li a.link:before {
   content: "";
@@ -53,10 +53,10 @@ li a.link:hover:before {
 .button {
   font-family: "Josefin Sans", sans-serif;
   font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
   margin: 0 auto;
   padding: 10px 20px 8px 20px;
-  border: solid 1px #393939;
   color: #000000;
   text-decoration: none;
   align-self: flex-end;
@@ -64,7 +64,6 @@ li a.link:hover:before {
 .button:hover {
   color: #ffffff;
   background-color: #AF8976;
-  border: solid 1px #EBE4DD;
 }
 
 /* --------------
@@ -143,29 +142,30 @@ Banner Styles
 
 .container-banner {
   margin: 50px 12%;
+  text-align: center;
 }
 
 .myname {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 24px;
+  font-family: "Crimson Text", serif;
+  font-size: 28px;
   text-transform: uppercase;
   color: #393939;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.3em;
+  margin: 20px 0px;
 }
 
-.roles {
-  font-family: "Crimson Text", serif;
-  font-size: 18px;
-  font-weight: 300;
-  font-style: italic;
-  margin-top: 20px;
+.roles,
+.location {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-.line {
-  content: "";
-  border-top: 1px solid #393939;
-  width: 183px;
+.location {
+  font-size: 12px;
 }
 
 .banner,
@@ -195,7 +195,7 @@ Banner Styles
   font-size: 1.15em;
   line-height: 1.5em;
   margin: 0px 5%;
-  padding-top: 70px;
+  padding-top: 120px;
 }
 
 .col {
@@ -217,15 +217,16 @@ Banner Styles
 }
 
 .category {
-  font-family: "Jost", sans-serif;
-  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
   line-height: 1.3em;
+    font-weight: 400;
   text-transform: uppercase;
 }
 
 .description {
-  font-family: "Jost", sans-serif;
-  font-size: 16px;
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
   line-height: 1.3em;
   font-weight: 300;
   padding-top: 30px;
@@ -283,7 +284,7 @@ Media Queries
   }
 
   .banner {
-    margin: 200px auto 150px auto;
+    margin: 300px auto 150px auto;
   }
 
   /*---- "Work" Container--- */
@@ -300,12 +301,12 @@ Media Queries
     flex-basis: 50%;
   }
 
-  s .subtitle {
-    font-size: 1em;
+  .subtitle {
+    font-size: 1.1em;
   }
 
   .category {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .btns {
@@ -338,6 +339,7 @@ Media Queries
   .container {
     padding: 0%;
   }
+
 
   .two,
 .four {
